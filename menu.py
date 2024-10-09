@@ -30,6 +30,10 @@ def mostrar_pacientes(pacientes:list)->None:
     Parametro: pacientes (list)
     Retorno: None
     '''
+
+    if pacientes == []:
+        return print("\033[31mNO hay pacientes registrados.\033[0m")
+    
     for i in range(len(pacientes)): 
                 print("-------------------------------------")
                 print(f"\033[32m[{i+1}] N° Historia Clínica: {pacientes[i][0]} | Nombre: {pacientes[i][1]} | Edad: {pacientes[i][2]} | Diagostico: {pacientes[i][3]} | Días de internación: {pacientes[i][4]}\033[0m")
@@ -42,6 +46,10 @@ def buscar_pacientes_historia_clinica(pacientes:list)->None:
     Parametro: pacientes (list)
     Retorno: None
     '''
+
+    if pacientes == []:
+        return print("\033[31mNO hay pacientes registrados.\033[0m")
+    
     print("\n- Buscar paciente por Historia Clínica -")
     paciente_a_buscar = int(input("Ingrese el número de historia clinica: "))
     paciente_encontrado = []
@@ -65,6 +73,10 @@ def ordenar_pacientes_historia_clinica(pacientes:list)->None:
     Parametro: pacientes (list)
     Retorno: None
     '''
+
+    if pacientes == []:
+        return print("\033[31mNO hay pacientes registrados.\033[0m")
+    
     for i in range(len(pacientes)):
             for j in range(0, len(pacientes) - i - 1):
                 if pacientes[j][0] > pacientes[j + 1][0]:
@@ -82,6 +94,10 @@ def paciente_mas_dias_internacion(pacientes:list)->None:
     Parametro: pacientes (list)
     Retorno: None
     '''
+
+    if pacientes == []:
+        return print("\033[31mNO hay pacientes registrados.\033[0m")
+    
     paciente_mas_dias = pacientes[0]
 
     for paciente in pacientes:
@@ -99,6 +115,10 @@ def paciente_menos_dias_internacion(pacientes:list)->None:
     Parametro: pacientes (list)
     Retorno: None
     '''
+
+    if pacientes == []:
+        return print("\033[31mNO hay pacientes registrados.\033[0m")
+    
     paciente_menos_dias = pacientes[0]
 
     for paciente in pacientes:
@@ -116,6 +136,10 @@ def pacientes_mas_5_dias_internacion(pacientes:list)->None:
     Parametro: inventario (list)
     Retorno: None
     '''
+
+    if pacientes == []:
+        return print("\033[31mNO hay pacientes registrados.\033[0m")
+    
     pacientes_mas_5_dias = 0
 
     for paciente in pacientes:
@@ -131,6 +155,10 @@ def promedio_dias_internacion(pacientes:list)->None:
     Parametro: inventario (list)
     Retorno: None
     '''
+
+    if pacientes == []:
+        return print("\033[31mNO hay pacientes registrados.\033[0m")
+    
     total_dias_internacion = 0
     
     for paciente in pacientes:

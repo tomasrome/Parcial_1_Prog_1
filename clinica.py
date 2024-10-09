@@ -1,17 +1,12 @@
 from menu import *
 
-pacientes = [
-    [1235, "Jorge Gomez", 54, "Fiebre", 2],
-    [1238, "Ana Perez", 25, "Hipotiroidismo", 5],
-    [1232, "Carlos Lopez", 30, "Neumonía", 5],
-    [1239, "Ludmila Gonzalez", 22, "Celulitis orbitaria", 10],
-]
+pacientes = []
 
 salida = ""
 
 while salida == "":
     mensaje_menu = '''
-    Sistema de Gestión de Clínica
+    \033[32mSistema de Gestión de Clínica\033[0m
     1. Cargar pacientes
     2. Mostrar todos los pacientes
     3. Buscar pacientes por número de Historia Clínica
