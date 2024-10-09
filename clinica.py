@@ -25,19 +25,40 @@ while salida == "":
         case "1":
             cargar_pacientes(pacientes)
         case "2":
-            mostrar_pacientes(pacientes)
+            if pacientes == []:
+                print("\033[31mNO hay pacientes registrados.\033[0m")
+            else:
+                mostrar_pacientes(pacientes)
         case "3":
-            buscar_pacientes_historia_clinica(pacientes)
+            if pacientes == []:
+                print("\033[31mNO hay pacientes registrados.\033[0m")
+            else:
+                buscar_pacientes_historia_clinica(pacientes)
         case "4":
-            ordenar_pacientes_historia_clinica(pacientes)
+            if pacientes == []:
+                print("\033[31mNO hay pacientes registrados.\033[0m")
+            else:
+                ordenar_pacientes_historia_clinica(pacientes)
         case "5":
-            paciente_mas_dias_internacion(pacientes)
+            if pacientes == []:
+                print("\033[31mNO hay pacientes registrados.\033[0m")
+            else:
+                paciente_mas_dias_internacion(pacientes)
         case "6":
-            paciente_menos_dias_internacion(pacientes)
+            if pacientes == []:
+                print("\033[31mNO hay pacientes registrados.\033[0m")
+            else:
+                paciente_menos_dias_internacion(pacientes)
         case "7":
-            pacientes_mas_5_dias_internacion(pacientes)
+            if pacientes == []:
+                print("\033[31mNO hay pacientes registrados.\033[0m")
+            else:
+                pacientes_mas_5_dias_internacion(pacientes)
         case "8":
-            promedio_dias_internacion(pacientes)
+            if pacientes == []:
+                print("\033[31mNO hay pacientes registrados.\033[0m")
+            else:
+                promedio_dias_internacion(pacientes)
         case "9":
             print("\033[32mSaliendo del programa...\033[0m")
             salida = "saliendo"
